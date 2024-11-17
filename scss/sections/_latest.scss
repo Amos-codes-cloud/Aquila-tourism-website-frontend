@@ -1,0 +1,160 @@
+@use '../custom'as *;
+@use '../components/mixins'as *;
+
+.portfolio {
+    padding: 4rem 0;
+
+
+    button {
+        text-transform: capitalize;
+    }
+}
+
+.portfolio-box {
+    position: relative;
+    width: 100%;
+    height: 18.5rem;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    border-top: 0.5rem solid $primary;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio-info {
+        background-color: rgba($primary, 0.75);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+
+
+        .caption {
+            text-align: center;
+            color: $white;
+            @include absoluteCenter;
+
+            h4 {
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.5);
+            @include transitionProperty
+        }
+        .portfolio-info {
+            opacity: 1;
+            visibility: visible;
+            @include transitionProperty;
+        }
+    }
+}
+
+
+
+
+// STYLING THE CONTACT
+
+// Define variables for different sizes
+$icon-size-small: 16px;
+$icon-size-medium: 24px;
+$icon-size-large: 32px;
+
+.fa-map-location-dot {
+    // Default size
+    font-size: $icon-size-medium;
+
+    // Size for small screens
+    @media (max-width: 600px) {
+        font-size: $icon-size-small;
+    }
+
+    // Size for large screens
+    @media (min-width: 1200px) {
+        font-size: $icon-size-large;
+    }
+}
+
+.fa-circle-info {
+    // Default size
+    font-size: $icon-size-medium;
+
+    // Size for small screens
+    @media (max-width: 600px) {
+        font-size: $icon-size-small;
+    }
+
+    // Size for large screens
+    @media (min-width: 1200px) {
+        font-size: $icon-size-large;
+    }
+}
+
+.fa-mobile {
+       // Default size
+    font-size: $icon-size-medium;
+
+    // Size for small screens
+    @media (max-width: 600px) {
+        font-size: $icon-size-small;
+    }
+
+    // Size for large screens
+    @media (min-width: 1200px) {
+        font-size: $icon-size-large;
+    }
+}
+
+.fa-envelope {
+       // Default size
+    font-size: $icon-size-medium;
+
+    // Size for small screens
+    @media (max-width: 600px) {
+        font-size: $icon-size-small;
+    }
+
+    // Size for large screens
+    @media (min-width: 1200px) {
+        font-size: $icon-size-large;
+    }
+}
+
+.fa-person-walking-arrow-right {
+       // Default size
+    font-size: $icon-size-medium;
+
+    // Size for small screens
+    @media (max-width: 600px) {
+        font-size: $icon-size-small;
+    }
+
+    // Size for large screens
+    @media (min-width: 1200px) {
+        font-size: $icon-size-large;
+    }
+}
+
+.fa-clock {
+      // Default size
+    font-size: $icon-size-medium;
+
+    // Size for small screens
+    @media (max-width: 600px) {
+        font-size: $icon-size-small;
+    }
+
+    // Size for large screens
+    @media (min-width: 1200px) {
+        font-size: $icon-size-large;
+    }
+}

@@ -1,0 +1,132 @@
+@use "../custom"as *;
+
+.display-2 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+
+  &--intro {
+    display: inline-block;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+  }
+
+  &--description {
+    font-size: 1rem;
+    display: block;
+    color: $white;
+    margin-top: 1.2rem;
+    text-transform: none;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.4rem;
+      display: inline-block;
+    }
+  }
+}
+
+// HEADING LINE
+.heading-line::before {
+  content: "";
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: $primary;
+}
+
+.heading-line::after {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  padding-top: 0.5rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: $primary;
+}
+
+// DISPLAY-3
+
+.display-3 {
+  font-family: "Poppins", sans-serif;
+
+  &--title {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    background-image: linear-gradient(to right, $primary, $secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include media-breakpoint-up (lg){
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// BORDER RIGHT
+
+.border-right {
+  border-right: 0.1rem solid $primary;
+  height: 100%;
+}
+
+
+// ALL THE LINKS
+
+a {
+  color: $secondary;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: $primary;
+}
+
+// SLIDES
+
+
+#carouselExampleIndicators {
+  width: 100%; // Make the carousel take up the full width of the column
+  height: auto; // Adjust height as needed, or set a specific height
+
+  .carousel-inner {
+    max-height: 350px; // Adjust the height of the carousel items
+    background: none;
+
+    img {
+      width: 100%; // Ensure images are responsive
+      height: auto;
+    }
+  }
+
+  .carousel-inner::before {
+    background: none;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; // Adjust the size of the control buttons if needed
+    color: $primary;
+  }
+}
+
+.strong {
+  color: rgb(85, 4, 4);
+}
+
+section  {
+  font-family: "Poppins", sans-serif;
+}
+
+
+// GRADIENT BG
+
+.gradient {
+   background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+}

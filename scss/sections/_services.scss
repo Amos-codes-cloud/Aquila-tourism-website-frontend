@@ -1,0 +1,24 @@
+@use "../custom"as *;
+
+// OUR SERVICES 
+
+.our-services {
+  position: relative;
+  background-image: url(/images/image.png);
+  background-size: cover;
+  background-attachment: fixed;
+
+&__content {
+  padding: 1rem;
+  margin-top: 0;
+
+  @include media-breakpoint-up (lg){
+    margin-top: 5rem;
+  }
+}
+}
+
+.sevices {
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+}

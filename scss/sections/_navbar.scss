@@ -1,0 +1,71 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+.menu {
+    @include gradient;
+    padding: 15px;
+    justify-content: space-between;
+    li {
+        padding: -95px;
+        a {
+            color: $white !important;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+    .logo {
+        margin-left: 2px;
+    }
+}
+
+.fa {
+    margin-right: 5px;
+    // color: $white;
+}
+
+.fa-solid {
+    margin-right: 5px;
+}
+
+.menu {
+    display: flex;
+}
+
+.active-menu,
+.menu ul li:hover {
+    background-color: $black;
+    border-bottom: 0.1rem solid $red;
+}
+
+.menu .sub-menu-1 ul {
+    display: none;
+}
+
+.menu ul li:hover .sub-menu-1 ul {
+    display: block;
+    border-top: 0.1rem solid $red;
+    position: absolute;
+    margin-top: 1px;
+    margin-left: -15px;
+    background-image: url(/images/istockphoto-1437524446-612x612.webp);
+    background-size: cover;
+    list-style: none;
+}
+
+.menu ul li:hover .sub-menu-1 ul li {
+    width: 600px;
+    padding: 10px;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    // border-bottom: 1px solid $white;
+}
+
+.menu ul li:hover .sub-menu-1 ul li a:hover {
+    color: black;
+}
+
+.pop {
+    position: flex;
+    margin-top: 200px;
+}
